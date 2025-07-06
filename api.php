@@ -1,8 +1,21 @@
 <?php
+
+require_once "conexion.php";
+     
 $name = $_POST["name"];
 $email = $_POST["email"];
 $subject = $_POST["subject"];
 $message = $_POST["message"];
+
+$query = "INSERT INTO datos (name, email, subject, mensaje) VALUES ($1, $2, $3, $4)";
+$result = pg_query_params($conn, $query, array($name, $email, $subject, $message));
+
+if (!$result) {
+    die("Error al guardar en la base de datos.");
+}
+
+
+
 
 require "vendor/autoload.php";
 
