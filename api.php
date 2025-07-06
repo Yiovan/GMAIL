@@ -11,6 +11,8 @@ use PHPMailer\PHPMailer\SMTP;
 
 $mail = new PHPMailer(exceptions: true);
 
+$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Disable debug output
+
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
