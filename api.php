@@ -14,11 +14,11 @@ $mail = new PHPMailer(exceptions: true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host = "smtp.example.com"; 
+$mail->Host = 'smtp.gmail.com';
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587; 
 
-$mail->Username = "giovannicabrerarivas@outlook.com";
+$mail->Username = "giovannicabrerarivas@gmail.com";
 $mail->Password = "Hecate_11";
 
 $mail->setFrom($email , $name);

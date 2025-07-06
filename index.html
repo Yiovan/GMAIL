@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>contacto</title>
+        <title>Contacto</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     </head>
 
 <body>
-    <h1>Contacto</h1>
-    <p>Para contactarnos, envia un correo por aca</p>
-    <form method="post">
-        <label for="name">name</label>
+    <h1>Bienvenido al CV de Giovanni Cabrera</h1>
+    <p>Si desea hablar conmigo, mande un correo aqui</p>
+    <form method="post" action="api.php">
+        <label for="name">Nombre</label>
         <input type="text" id="name" name="name" required>
         
         <label for="email">email</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="subject">subject</label>
+        <label for="subject">Encabezado</label>
         <input type="text" id="subject" name="subject" required>
 
-        <label for="message">message</label>
+        <label for="message">Mensaje</label>
         <textarea id="message" name="message" required></textarea>
 
         <br>
