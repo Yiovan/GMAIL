@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\SMTP;
 
 $mail = new PHPMailer(exceptions: true);
 
-$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Disable debug output
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Disable debug output
 
 $mail->isSMTP();
 $mail->SMTPAuth = true;
@@ -24,7 +24,7 @@ $mail->Username = "giovannicabrerarivas@gmail.com";
 $mail->Password = "bqxh suom gtei hwkd";
 
 $mail->setFrom($email , $name);
-$mail->addAddress('giovannicabrerarivas@gmail.com', 'Yio');
+$mail->addAddress('giovannicabrerarivas@gmail.com', 'Formulario de contacto');
 $mail->Subject = $subject;
 $mail->Body = $message;
 
