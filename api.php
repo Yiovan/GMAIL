@@ -2,10 +2,11 @@
 
 require_once "conexion.php";
      
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
+$name = utf8_encode($_POST["name"]);
+$email = utf8_encode($_POST["email"]);
+$subject = utf8_encode($_POST["subject"]);
+$message = utf8_encode($_POST["message"]);
+ 
 
 $query = "INSERT INTO datos (name, email, subject, mensaje) VALUES ($1, $2, $3, $4)";
 $result = pg_query_params($conn, $query, array($name, $email, $subject, $message));
